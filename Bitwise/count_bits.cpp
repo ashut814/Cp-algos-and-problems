@@ -13,6 +13,17 @@ int countSetBits(int n){
     return count;
 }
 
+// trick
+
+int count_set_bits_hack(int n){
+    int ans = 0;
+    while(n>0){
+        n = n & (n-1); // remove the last set bit from current number
+        ans++;
+    }
+    return ans;
+}
+
 int main()
 {
     int n;
